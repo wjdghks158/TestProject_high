@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout n1:id="@+id/left_user_info" n1:tag="left" n1:background="#FFD100" n1:layout_width="match_parent" n1:layout_height="5dp"
+    xmlns:n1="http://schemas.android.com/apk/res/android">
+    <ImageView n1:id="@+id/left_drawer_thumb" n1:background="@drawable/profile_nopic" n1:visibility="gone" n1:layout_width="42.0dip" n1:layout_height="42.0dip" n1:layout_marginLeft="20.0dip" n1:layout_marginRight="-10.0dip" n1:layout_centerVertical="true" />
+    <TextView n1:ellipsize="end" n1:gravity="start|center" n1:id="@+id/left_drawer_name" n1:visibility="gone" n1:layout_width="match_parent" n1:layout_height="match_parent" n1:layout_marginLeft="20.0dip" n1:text="drawer_left_header_left_drawer_login_default_txt" n1:lines="1" n1:layout_toLeftOf="@+id/left_drawer_menu1" n1:layout_toRightOf="@+id/left_drawer_thumb" n1:layout_centerVertical="true" />
+    <TextView n1:ellipsize="end" n1:gravity="start|center" n1:id="@+id/left_drawer_login" n1:layout_width="wrap_content" n1:layout_height="match_parent" n1:layout_marginLeft="20.0dip" n1:text="drawer_left_header_left_drawer_left_drawer_login_default_txt" n1:lines="1" n1:layout_toRightOf="@+id/left_drawer_thumb" n1:layout_centerVertical="true" style="" />
+    <View n1:id="@+id/divider" n1:background="#44442816" n1:layout_width="1dp" n1:layout_height="20.0dip" n1:layout_marginLeft="15.0dip" n1:layout_marginTop="2.0dip" n1:layout_marginRight="15.0dip" n1:layout_toRightOf="@+id/left_drawer_login" n1:layout_centerVertical="true" />
+    <TextView n1:textStyle="bold" n1:gravity="start|center" n1:id="@+id/left_drawer_join" n1:layout_width="wrap_content" n1:layout_height="match_parent" n1:text="drawer_left_header_left_drawer_drawer_join_member" n1:layout_toRightOf="@+id/divider" n1:layout_centerVertical="true" style="" />
+    <ImageView n1:id="@+id/left_drawer_close" n1:layout_width="40.0dip" n1:layout_height="match_parent" n1:layout_marginRight="10.0dip" n1:src="@drawable/navigation_close_selector" n1:scaleType="center" n1:layout_alignParentRight="true" n1:layout_centerVertical="true" n1:contentDescription="drawer_left_header_left_drawer_none" />
+    <ImageView n1:gravity="center" n1:id="@+id/left_drawer_menu1" n1:layout_width="40.0dip" n1:layout_height="match_parent" n1:src="@drawable/drawer_head_com_selector" n1:scaleType="center" n1:layout_toLeftOf="@+id/left_drawer_close" n1:contentDescription="drawer_left_header_left_drawer_none" />
+</RelativeLayout>

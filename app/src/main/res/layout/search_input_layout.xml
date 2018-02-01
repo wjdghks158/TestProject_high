@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout n1:gravity="center_vertical" n1:orientation="horizontal" n1:id="@+id/search_parent_view" n1:background="#FFD100" n1:layout_width="match_parent" n1:layout_height="34.0dip" n1:layout_marginLeft="13.0dip" n1:layout_marginRight="13.0dip"
+    xmlns:n1="http://schemas.android.com/apk/res/android">
+    <LinearLayout n1:id="@+id/search_del_parent" n1:layout_width="wrap_content" n1:layout_height="match_parent" n1:layout_alignParentRight="true">
+        <LinearLayout n1:gravity="center_vertical" n1:id="@+id/search_keyword_del_parent" n1:layout_width="wrap_content" n1:layout_height="34.0dip" n1:layout_marginRight="8.0dip">
+            <TextView n1:id="@+id/search_keyword_del" n1:background="@drawable/home_btn_search_x" n1:visibility="gone" n1:layout_width="25.0dip" n1:layout_height="25.0dip" />
+        </LinearLayout>
+        <LinearLayout n1:gravity="center_vertical" n1:background="#00000000" n1:layout_width="wrap_content" n1:layout_height="34.0dip">
+            <Button n1:enabled="true" n1:id="@+id/searchbtn" n1:background="@drawable/testimage" n1:layout_width="34.0dip" n1:layout_height="34.0dip" />
+            <!--home_btn_search-->
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout n1:layout_width="match_parent" n1:layout_height="40.0dip" n1:layout_toLeftOf="@+id/search_del_parent" n1:layout_alignParentLeft="true" n1:layout_alignParentTop="true">
+        <EditText n1:enabled="false" n1:textSize="14.0sp" n1:textStyle="normal" n1:textColor="#ff000000" n1:textColorHint="#ffffffff" n1:id="@+id/search_input" n1:background="#00000000" n1:paddingLeft="20.0dip" n1:layout_width="match_parent" n1:layout_height="match_parent" n1:maxLines="1" />
+        <View n1:enabled="false" n1:textSize="14.0sp" n1:textStyle="normal" n1:textColor="#ff000000" n1:textColorHint="#ffffffff" n1:id="@+id/search_go" n1:background="#00000000" n1:paddingLeft="20.0dip" n1:layout_width="match_parent" n1:layout_height="match_parent" n1:maxLines="1" />
+    </FrameLayout>
+</RelativeLayout>

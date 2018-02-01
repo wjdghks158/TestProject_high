@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge>
+    <ScrollView n1:id="@+id/right_container" n1:scrollbars="none" n1:layout_width="match_parent" n1:layout_height="match_parent"
+        xmlns:n1="http://schemas.android.com/apk/res/android">
+        <RelativeLayout n1:orientation="vertical" n1:id="@+id/right_drawer" n1:background="#fff3f3f3" n1:layout_width="match_parent" n1:layout_height="wrap_content" n1:layout_marginTop="5dp" xmlns:n2="http://schemas.android.com/apk/res-auto" />
+    </ScrollView>
+</merge>

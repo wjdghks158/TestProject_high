@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:orientation="vertical" android:id="@id/content" android:layout_width="match_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="horizontal" android:id="@+id/webViewParent" android:paddingTop="120.0dip" android:layout_width="match_parent" android:layout_height="match_parent" />
+            <LinearLayout android:gravity="center" android:id="@+id/refresh_parent" android:visibility="gone" android:layout_width="match_parent" android:layout_height="match_parent">
+                <TextView android:textSize="12.0sp" android:layout_gravity="center" android:id="@+id/refresh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="37.0dip" android:text="" android:drawableTop="@drawable/refresh_icon" />
+            </LinearLayout>
+        </LinearLayout>
+        <include android:layout_width="match_parent" android:layout_height="match_parent" layout="@layout/actionbar_custom" />
+    </FrameLayout>
+    <include layout="@layout/serch_relation_layout"/>
+    <include layout="@layout/main_banner_layout"/>
+</FrameLayout>

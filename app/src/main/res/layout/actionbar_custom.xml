@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout n1:orientation="vertical" n1:id="@+id/actionbar_parent" n1:layout_width="fill_parent" n1:layout_height="wrap_content"
+    xmlns:n1="http://schemas.android.com/apk/res/android">
+    <android.support.v7.widget.Toolbar n1:orientation="vertical" n1:id="@+id/actionbar" n1:background="#ffffffff" n1:layout_width="fill_parent" n1:layout_height="wrap_content" n2:contentInsetStart="0.0dip" xmlns:n2="http://schemas.android.com/apk/res-auto">
+        <LinearLayout n1:orientation="vertical" n1:layout_width="fill_parent" n1:layout_height="wrap_content">
+            <RelativeLayout n1:layout_width="fill_parent" n1:layout_height="44.0dip">
+                <ImageButton n1:id="@+id/menuLeft" n1:background="#00000000" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_marginLeft="10.0dip" n1:src="@drawable/main_left_drawer_icon_selector" n1:layout_alignParentLeft="true" n1:layout_centerVertical="true" />
+                <ImageButton n1:id="@+id/menuRight" n1:background="#00000000" n1:visibility="visible" n1:layout_width="40.0dip" n1:layout_height="40.0dip" n1:layout_marginRight="10.0dip" n1:src="@drawable/main_icon_drawer_r_w_selector" n1:layout_alignParentRight="true" n1:layout_centerVertical="true" />
+                <ImageView n1:id="@+id/bi_btn" n1:layout_width="262.0dip" n1:layout_height="44.0dip" n1:layout_marginLeft="37.0dip" n1:layout_marginRight="37.0dip" n1:layout_centerInParent="true" />
+            </RelativeLayout>
+            <include layout="@layout/search_input_layout" />
+        </LinearLayout>
+    </android.support.v7.widget.Toolbar>
+    <FrameLayout n1:id="@+id/tabLayoutParent" n1:background="#ffffffff" n1:layout_width="match_parent" n1:layout_height="wrap_content">
+        <FrameLayout n1:layout_width="match_parent" n1:layout_height="wrap_content">
+            <LinearLayout n1:orientation="vertical" n1:id="@+id/tabbar_container" n1:layout_width="match_parent" n1:layout_height="wrap_content">
+                <TextView
+                    n1:layout_width="wrap_content"
+                    n1:layout_height="wrap_content"
+                    n1:text="아직테스트"/>
+                <HorizontalScrollView n1:scrollbars="none" n1:layout_width="match_parent" n1:layout_height="44.0dip" n1:layout_marginLeft="13.0dip" n1:layout_marginRight="42.0dip">
+                    <LinearLayout n1:gravity="center" n1:orientation="horizontal" n1:id="@+id/tabLayout" n1:layout_width="match_parent" n1:layout_height="match_parent" />
+                </HorizontalScrollView>
+                <View n1:background="#ffe8e8e8" n1:layout_width="match_parent" n1:layout_height="1.0dip" />
+            </LinearLayout>
+            <LinearLayout n1:orientation="vertical" n1:id="@+id/mymenu_container" n1:visibility="visible" n1:layout_width="match_parent" n1:layout_height="wrap_content">
+
+                <LinearLayout n1:orientation="vertical" n1:id="@+id/mymenu_grid_container" n1:background="@android:color/white" n1:layout_width="match_parent" n1:layout_height="wrap_content" n1:layout_marginLeft="13.0dip" n1:layout_marginRight="13.0dip">
+                    <GridView n1:id="@+id/gridview1" n1:background="@android:color/white" n1:scrollbars="none" n1:fadingEdge="none" n1:layout_width="match_parent" n1:layout_height="wrap_content" n1:listSelector="@android:color/transparent" n1:cacheColorHint="#ffffffff" n1:horizontalSpacing="5.0dip" n1:verticalSpacing="5.0dip" n1:stretchMode="columnWidth" n1:columnWidth="90.0dip" n1:numColumns="3" />
+                </LinearLayout>
+                <View n1:background="#ffe8e8e8" n1:layout_width="match_parent" n1:layout_height="1.0dip" n1:layout_marginTop="1.0dip" />
+            </LinearLayout>
+        </FrameLayout>
+        <RelativeLayout n1:visibility="visible" n1:layout_width="match_parent" n1:layout_height="42.0dip">
+            <LinearLayout n1:gravity="center_vertical" n1:layout_width="wrap_content" n1:layout_height="match_parent" n1:layout_marginRight="5.0dip" n1:layout_alignParentRight="true">
+                <ImageView n1:background="@drawable/home_menu_shadow" n1:layout_width="wrap_content" n1:layout_height="wrap_content" n1:layout_centerVertical="true" />
+                <ImageButton n1:id="@+id/mymenu_updown_arrow" n1:background="@drawable/home_menu_btn_arr_down" n1:layout_width="34.0dip" n1:layout_height="34.0dip" />
+            </LinearLayout>
+        </RelativeLayout>
+    </FrameLayout>
+</LinearLayout>
