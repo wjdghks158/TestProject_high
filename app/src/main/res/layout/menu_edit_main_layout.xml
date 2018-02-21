@@ -11,7 +11,7 @@
         android:id="@+id/menu_et"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="http://223.194.129.108:3000/process/listpost"/>
+        android:text="http://172.30.75.60:3000/process/listpost"/>
 
     <Button
     android:id="@+id/menu_btn"
@@ -23,7 +23,14 @@
         android:id="@+id/menu_btn2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="요청"/>
+        android:text="그림요청"/>
+
+    <Button
+        android:id="@+id/menu_btn_push"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="푸시등록"/>
+
 
     <ImageView
         android:id="@+id/menu_img"
