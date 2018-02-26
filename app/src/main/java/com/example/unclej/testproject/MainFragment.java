@@ -1,9 +1,13 @@
 package com.example.unclej.testproject;
 
+import android.app.NotificationManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
 import android.support.annotation.Nullable;
+import android.support.v4.view.GravityCompat;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,6 +18,7 @@ import android.widget.AbsListView;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,6 +38,8 @@ public class MainFragment extends BaseFragment implements View.OnClickListener{
     private LinearLayout mTabBarContainer;
     private LinearLayout mTabLayout;
     private GridView mGridView;
+    ImageButton navi_btn;
+    private long mLastClickTime = 0;
 
     @Override
     protected int getLayoutResource() {
@@ -61,7 +68,32 @@ public class MainFragment extends BaseFragment implements View.OnClickListener{
         this.mTabBarContainer = (LinearLayout)view.findViewById(R.id.tabbar_container);
         this.mTabLayout = (LinearLayout)view.findViewById(R.id.tabLayout);
         this.mGridView = (GridView)view.findViewById(R.id.gridview1);
+        this.navi_btn = (ImageButton)view.findViewById(R.id.menuLeft);
+        this.navi_btn.setOnClickListener(this);
         setMymenu();
+
+    }
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        Log.d("박정환","MainFragment-onCreate");
+        int id=0;
+        CharSequence s = "전달 받은 값은 ";
+        Bundle extras = getActivity().getIntent().getExtras();
+        if (extras == null) {
+            s = "error";
+        }
+        else {
+            id = extras.getInt("notificationId");
+        }
+       // NotificationManager nm =
+         //       (NotificationManager) getActivity().getSystemService(Context.NOTIFICATION_SERVICE);
+
+        //노티피케이션 제거
+        //nm.cancel(id);
+
 
     }
 
@@ -148,6 +180,12 @@ public class MainFragment extends BaseFragment implements View.OnClickListener{
             case R.id.searchbtn :
                 Log.d("박정환","searchbtn누름");
                 return;
+            case R.id.menuLeft :
+                Log.d("박정환", "네비 버튼 맞네");
+                if (!doubleClickRestric()) {
+                  //  ((MainActivity) getActivity()).openDrawers(GravityCompat.START);
+                    return;
+                }
 
            // case R.id.
         }
@@ -241,5 +279,13 @@ public class MainFragment extends BaseFragment implements View.OnClickListener{
             return v;
 
         }
+    }
+
+    private boolean doubleClickRestric() {
+        if (SystemClock.elapsedRealtime() - this.mLastClickTime < 1000) {
+            return true;
+        }
+        this.mLastClickTime = SystemClock.elapsedRealtime();
+        return false;
     }
 }
